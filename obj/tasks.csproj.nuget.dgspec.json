@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\B\\פיפרמן חיה\\core\\tasks\\tasks.csproj": {}
+    "Z:\\B\\שוב ציפורה\\core\\lesson2\\tasks\\tasks.csproj": {}
   },
   "projects": {
-    "Z:\\B\\פיפרמן חיה\\core\\tasks\\tasks.csproj": {
+    "Z:\\B\\שוב ציפורה\\core\\lesson2\\tasks\\tasks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\B\\פיפרמן חיה\\core\\tasks\\tasks.csproj",
+        "projectUniqueName": "Z:\\B\\שוב ציפורה\\core\\lesson2\\tasks\\tasks.csproj",
         "projectName": "tasks",
-        "projectPath": "Z:\\B\\פיפרמן חיה\\core\\tasks\\tasks.csproj",
+        "projectPath": "Z:\\B\\שוב ציפורה\\core\\lesson2\\tasks\\tasks.csproj",
         "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
-        "outputPath": "Z:\\B\\פיפרמן חיה\\core\\tasks\\obj\\",
+        "outputPath": "Z:\\B\\שוב ציפורה\\core\\lesson2\\tasks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

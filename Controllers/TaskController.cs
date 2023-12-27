@@ -1,25 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using tasks.Models;
-using tasks.Services;
+using tasks.Interfaces;
 
 namespace tasks.Controllers;
+
 
 [ApiController]
 [Route("[controller]")]
 public class TasksController : ControllerBase
 {
-    // private static readonly string[] Summaries = new[]
-    // {
-    //     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    // };
 
-    // private readonly ILogger<WeatherForecastController> _logger;
 
-    // public WeatherForecastController(ILogger<WeatherForecastController> logger)
-    // {
-    //     _logger = logger;
-    // }
- [HttpGet]
+    ITasksService TasksService;
+    public TasksController(ITasksService TasksService)
+    {
+        this.TasksService = TasksService;
+    }
+
+    [HttpGet]
     public ActionResult<List<Task1>> Get()
     {
         return TasksService.GetAll();
@@ -47,6 +45,17 @@ public class TasksController : ControllerBase
     public ActionResult Put(int id,Task1 newTask)
     {
         var result = TasksService.Update(id, newTask);
+        if (!result)
+        {
+            return BadRequest();
+        }
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public ActionResult Delete(int id)
+    {
+        var result = TasksService.Delete(id);
         if (!result)
         {
             return BadRequest();
